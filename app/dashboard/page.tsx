@@ -21,7 +21,6 @@ import {
   AlertTriangle,
   Calendar,
   MapPin,
-  Thermometer,
   Droplets,
   Wind,
   Sun,
@@ -31,10 +30,14 @@ import {
   Clock,
   CheckCircle2,
   AlertCircle,
-  TrendingDown,
   Zap,
   Leaf,
   Star,
+  Wheat,
+  Beef,
+  Egg,
+  Tractor,
+  Sprout,
 } from "lucide-react"
 import Link from "next/link"
 
@@ -47,14 +50,14 @@ export default function DashboardPage() {
           <div className="flex items-center space-x-4">
             <Link href="/" className="flex items-center space-x-2">
               <div className="w-8 h-8 bg-gradient-to-br from-green-600 to-emerald-600 rounded-lg flex items-center justify-center">
-                <Fish className="w-5 h-5 text-white" />
+                <Tractor className="w-5 h-5 text-white" />
               </div>
               <div>
                 <span className="text-xl font-bold text-green-800">TessyFarm Nexus</span>
                 <div className="text-xs text-gray-500">Unified AI Platform</div>
               </div>
             </Link>
-            <Badge variant="secondary">Farmer Dashboard</Badge>
+            <Badge variant="secondary">Multi-Farm Dashboard</Badge>
             <Badge className="bg-green-100 text-green-800">All Systems Active</Badge>
           </div>
 
@@ -65,7 +68,7 @@ export default function DashboardPage() {
               </Button>
               <div className="absolute -top-1 -right-1 w-3 h-3 bg-red-500 rounded-full animate-pulse" />
             </div>
-            <Button variant="ghost" size="icon" title="Voice Assistant (Yoruba/English)">
+            <Button variant="ghost" size="icon" title="Voice Assistant (Yoruba/English/Hausa/Igbo)">
               <Mic className="w-5 h-5" />
             </Button>
             <Button variant="ghost" size="icon">
@@ -88,7 +91,7 @@ export default function DashboardPage() {
       </header>
 
       <div className="flex">
-        {/* Enhanced Sidebar */}
+        {/* Enhanced Sidebar for All Farm Types */}
         <aside className="w-64 bg-white border-r min-h-screen">
           <nav className="p-4 space-y-2">
             <Link
@@ -135,7 +138,7 @@ export default function DashboardPage() {
               >
                 <Package className="w-5 h-5" />
                 <span>Branded Products</span>
-                <Badge className="ml-auto bg-green-100 text-green-800 text-xs">12</Badge>
+                <Badge className="ml-auto bg-green-100 text-green-800 text-xs">18</Badge>
               </Link>
               <Link
                 href="/dashboard/traceability"
@@ -150,23 +153,47 @@ export default function DashboardPage() {
               >
                 <ShoppingCart className="w-5 h-5" />
                 <span>Marketplace</span>
-                <Badge className="ml-auto bg-purple-100 text-purple-800 text-xs">3 Orders</Badge>
+                <Badge className="ml-auto bg-purple-100 text-purple-800 text-xs">7 Orders</Badge>
               </Link>
             </div>
 
-            {/* Farm Management */}
+            {/* Multi-Farm Management */}
             <div className="pt-4">
               <div className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2 flex items-center">
-                <Fish className="w-3 h-3 mr-1" />
+                <Tractor className="w-3 h-3 mr-1" />
                 Farm Management
               </div>
               <Link
-                href="/dashboard/ponds"
+                href="/dashboard/crops"
+                className="flex items-center space-x-3 px-3 py-2 text-gray-600 hover:bg-gray-50 rounded-lg"
+              >
+                <Wheat className="w-5 h-5" />
+                <span>Crop Fields</span>
+                <Badge className="ml-auto bg-green-100 text-green-800 text-xs">8 Fields</Badge>
+              </Link>
+              <Link
+                href="/dashboard/livestock"
+                className="flex items-center space-x-3 px-3 py-2 text-gray-600 hover:bg-gray-50 rounded-lg"
+              >
+                <Beef className="w-5 h-5" />
+                <span>Livestock</span>
+                <Badge className="ml-auto bg-amber-100 text-amber-800 text-xs">45 Cattle</Badge>
+              </Link>
+              <Link
+                href="/dashboard/poultry"
+                className="flex items-center space-x-3 px-3 py-2 text-gray-600 hover:bg-gray-50 rounded-lg"
+              >
+                <Egg className="w-5 h-5" />
+                <span>Poultry</span>
+                <Badge className="ml-auto bg-yellow-100 text-yellow-800 text-xs">200 Birds</Badge>
+              </Link>
+              <Link
+                href="/dashboard/aquaculture"
                 className="flex items-center space-x-3 px-3 py-2 text-gray-600 hover:bg-gray-50 rounded-lg"
               >
                 <Fish className="w-5 h-5" />
-                <span>My Ponds</span>
-                <Badge className="ml-auto bg-blue-100 text-blue-800 text-xs">6 Active</Badge>
+                <span>Fish Ponds</span>
+                <Badge className="ml-auto bg-blue-100 text-blue-800 text-xs">6 Ponds</Badge>
               </Link>
               <Link
                 href="/dashboard/predictions"
@@ -196,8 +223,8 @@ export default function DashboardPage() {
                 <h1 className="text-3xl font-bold text-gray-900 mb-2">Good morning, Adebayo! 🌅</h1>
                 <p className="text-gray-600 flex items-center">
                   <MapPin className="w-4 h-4 mr-1" />
-                  Your farm in Akure is performing excellently today.
-                  <span className="ml-2 text-green-600 font-medium">All systems optimal</span>
+                  Your diversified farm in Akure is performing excellently today.
+                  <span className="ml-2 text-green-600 font-medium">All operations optimal</span>
                 </p>
               </div>
               <div className="text-right">
@@ -212,13 +239,13 @@ export default function DashboardPage() {
                 </div>
                 <div className="text-sm text-gray-500 flex items-center justify-end mt-1">
                   <Sun className="w-4 h-4 mr-1 text-yellow-500" />
-                  28°C • Sunny
+                  28°C • Sunny • Perfect for farming
                 </div>
               </div>
             </div>
           </div>
 
-          {/* Enhanced Key Metrics */}
+          {/* Enhanced Key Metrics for All Farm Types */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
             <Card className="relative overflow-hidden">
               <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-500 to-blue-600" />
@@ -238,13 +265,14 @@ export default function DashboardPage() {
             <Card className="relative overflow-hidden">
               <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-green-500 to-emerald-600" />
               <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-                <CardTitle className="text-sm font-medium">Active Ponds</CardTitle>
-                <Fish className="h-4 w-4 text-blue-600" />
+                <CardTitle className="text-sm font-medium">Active Operations</CardTitle>
+                <Tractor className="h-4 w-4 text-green-600" />
               </CardHeader>
               <CardContent>
-                <div className="text-2xl font-bold">6</div>
-                <p className="text-xs text-amber-600 flex items-center">
-                  <Clock className="w-3 h-3 mr-1" />2 ready for harvest
+                <div className="text-2xl font-bold">4</div>
+                <p className="text-xs text-blue-600 flex items-center">
+                  <Sprout className="w-3 h-3 mr-1" />
+                  Crops, Livestock, Poultry, Fish
                 </p>
               </CardContent>
             </Card>
@@ -256,7 +284,7 @@ export default function DashboardPage() {
                 <Package className="h-4 w-4 text-green-600" />
               </CardHeader>
               <CardContent>
-                <div className="text-2xl font-bold">12</div>
+                <div className="text-2xl font-bold">18</div>
                 <p className="text-xs text-green-600 flex items-center">
                   <CheckCircle2 className="w-3 h-3 mr-1" />
                   Ready for market
@@ -271,58 +299,62 @@ export default function DashboardPage() {
                 <TrendingUp className="h-4 w-4 text-emerald-600" />
               </CardHeader>
               <CardContent>
-                <div className="text-2xl font-bold">₦3.2M</div>
+                <div className="text-2xl font-bold">₦4.8M</div>
                 <p className="text-xs text-green-600 flex items-center">
                   <TrendingUp className="w-3 h-3 mr-1" />
-                  +18% from last month
+                  +22% from last month
                 </p>
               </CardContent>
             </Card>
           </div>
 
-          {/* Weather & Environmental Conditions */}
+          {/* Farm Operations Overview */}
           <div className="grid grid-cols-1 lg:grid-cols-4 gap-6 mb-8">
             <Card>
               <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-                <CardTitle className="text-sm font-medium">Temperature</CardTitle>
-                <Thermometer className="h-4 w-4 text-orange-500" />
+                <CardTitle className="text-sm font-medium">Crop Fields</CardTitle>
+                <Wheat className="h-4 w-4 text-green-500" />
               </CardHeader>
               <CardContent>
-                <div className="text-2xl font-bold">28°C</div>
-                <p className="text-xs text-gray-500">Optimal range</p>
+                <div className="text-2xl font-bold">8</div>
+                <p className="text-xs text-gray-500">Maize, Cassava, Yam, Rice</p>
+                <p className="text-xs text-green-600 mt-1">3 ready for harvest</p>
               </CardContent>
             </Card>
 
             <Card>
               <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-                <CardTitle className="text-sm font-medium">Humidity</CardTitle>
-                <Droplets className="h-4 w-4 text-blue-500" />
+                <CardTitle className="text-sm font-medium">Livestock</CardTitle>
+                <Beef className="h-4 w-4 text-amber-500" />
               </CardHeader>
               <CardContent>
-                <div className="text-2xl font-bold">72%</div>
-                <p className="text-xs text-gray-500">Good for fish</p>
+                <div className="text-2xl font-bold">45</div>
+                <p className="text-xs text-gray-500">Cattle, Goats, Sheep</p>
+                <p className="text-xs text-blue-600 mt-1">All healthy</p>
               </CardContent>
             </Card>
 
             <Card>
               <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-                <CardTitle className="text-sm font-medium">Wind Speed</CardTitle>
-                <Wind className="h-4 w-4 text-gray-500" />
+                <CardTitle className="text-sm font-medium">Poultry</CardTitle>
+                <Egg className="h-4 w-4 text-yellow-500" />
               </CardHeader>
               <CardContent>
-                <div className="text-2xl font-bold">12 km/h</div>
-                <p className="text-xs text-gray-500">Light breeze</p>
+                <div className="text-2xl font-bold">200</div>
+                <p className="text-xs text-gray-500">Layers, Broilers</p>
+                <p className="text-xs text-amber-600 mt-1">150 eggs/day</p>
               </CardContent>
             </Card>
 
             <Card>
               <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-                <CardTitle className="text-sm font-medium">Rain Forecast</CardTitle>
-                <CloudRain className="h-4 w-4 text-blue-600" />
+                <CardTitle className="text-sm font-medium">Fish Ponds</CardTitle>
+                <Fish className="h-4 w-4 text-blue-500" />
               </CardHeader>
               <CardContent>
-                <div className="text-2xl font-bold">15%</div>
-                <p className="text-xs text-gray-500">Low chance</p>
+                <div className="text-2xl font-bold">6</div>
+                <p className="text-xs text-gray-500">Catfish, Tilapia</p>
+                <p className="text-xs text-purple-600 mt-1">2 ready to harvest</p>
               </CardContent>
             </Card>
           </div>
@@ -333,86 +365,88 @@ export default function DashboardPage() {
               <TabsTrigger value="overview">Overview</TabsTrigger>
               <TabsTrigger value="finance">My Finance</TabsTrigger>
               <TabsTrigger value="products">My Products</TabsTrigger>
-              <TabsTrigger value="farm">My Farm</TabsTrigger>
+              <TabsTrigger value="operations">Farm Operations</TabsTrigger>
               <TabsTrigger value="insights">AI Insights</TabsTrigger>
             </TabsList>
 
             <TabsContent value="overview" className="space-y-6">
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-                {/* Enhanced Today's Activities */}
+                {/* Enhanced Today's Activities for All Farm Types */}
                 <Card>
                   <CardHeader>
                     <CardTitle className="flex items-center">
                       <Calendar className="w-5 h-5 mr-2" />
-                      Today's Activities
+                      Today's Farm Activities
                     </CardTitle>
-                    <CardDescription>Your scheduled farm tasks and progress</CardDescription>
+                    <CardDescription>Your scheduled tasks across all farm operations</CardDescription>
                   </CardHeader>
                   <CardContent className="space-y-4">
                     <div className="flex items-center space-x-3 p-3 bg-green-50 rounded-lg">
                       <CheckCircle2 className="w-5 h-5 text-green-500" />
                       <div className="flex-1">
-                        <p className="text-sm font-medium">Morning feeding - Pond 3 & 4</p>
-                        <p className="text-xs text-gray-500">Completed at 7:30 AM • 2.5kg feed used</p>
+                        <p className="text-sm font-medium">Morning feeding - Fish ponds & Poultry</p>
+                        <p className="text-xs text-gray-500">
+                          Completed at 6:30 AM • 2.5kg fish feed, 15kg poultry feed
+                        </p>
                       </div>
                     </div>
                     <div className="flex items-center space-x-3 p-3 bg-amber-50 rounded-lg">
                       <Clock className="w-5 h-5 text-amber-500" />
                       <div className="flex-1">
-                        <p className="text-sm font-medium">Water quality check - All ponds</p>
-                        <p className="text-xs text-gray-500">Due at 2:00 PM • pH and oxygen levels</p>
+                        <p className="text-sm font-medium">Livestock health check</p>
+                        <p className="text-xs text-gray-500">Due at 10:00 AM • Cattle vaccination follow-up</p>
                       </div>
                     </div>
                     <div className="flex items-center space-x-3 p-3 bg-blue-50 rounded-lg">
-                      <Package className="w-5 h-5 text-blue-500" />
+                      <Wheat className="w-5 h-5 text-blue-500" />
                       <div className="flex-1">
-                        <p className="text-sm font-medium">Fertilizer packaging</p>
-                        <p className="text-xs text-gray-500">Scheduled for 4:00 PM • 50kg batch</p>
+                        <p className="text-sm font-medium">Maize field irrigation</p>
+                        <p className="text-xs text-gray-500">Scheduled for 2:00 PM • Field 3 & 4</p>
                       </div>
                     </div>
                     <div className="flex items-center space-x-3 p-3 bg-purple-50 rounded-lg">
-                      <ShoppingCart className="w-5 h-5 text-purple-500" />
+                      <Package className="w-5 h-5 text-purple-500" />
                       <div className="flex-1">
-                        <p className="text-sm font-medium">Marketplace order delivery</p>
-                        <p className="text-xs text-gray-500">Tomorrow 9:00 AM • Lagos customer</p>
+                        <p className="text-sm font-medium">Egg collection & packaging</p>
+                        <p className="text-xs text-gray-500">Evening collection • Expected 150 eggs</p>
                       </div>
                     </div>
                   </CardContent>
                 </Card>
 
-                {/* Enhanced Personal Alerts */}
+                {/* Enhanced Alerts for All Farm Types */}
                 <Card>
                   <CardHeader>
                     <CardTitle className="flex items-center">
                       <AlertTriangle className="w-5 h-5 mr-2 text-amber-500" />
-                      Your Alerts & Notifications
+                      Farm Alerts & Notifications
                     </CardTitle>
-                    <CardDescription>Important updates for your farm</CardDescription>
+                    <CardDescription>Important updates across all your operations</CardDescription>
                   </CardHeader>
                   <CardContent className="space-y-4">
                     <div className="p-3 bg-red-50 border border-red-200 rounded-lg">
                       <div className="flex items-center justify-between mb-2">
                         <p className="text-sm font-medium text-red-800 flex items-center">
                           <AlertCircle className="w-4 h-4 mr-1" />
-                          Urgent: Feed Schedule
+                          Urgent: Livestock Water
                         </p>
                         <Badge className="bg-red-100 text-red-800">High Priority</Badge>
                       </div>
-                      <p className="text-xs text-red-600">Pond 5 evening feeding overdue by 30 minutes</p>
+                      <p className="text-xs text-red-600">Cattle water trough in Section B is running low</p>
                       <Button size="sm" className="mt-2 bg-red-600 hover:bg-red-700">
-                        Mark as Done
+                        Refill Now
                       </Button>
                     </div>
                     <div className="p-3 bg-blue-50 border border-blue-200 rounded-lg">
                       <div className="flex items-center justify-between mb-2">
                         <p className="text-sm font-medium text-blue-800 flex items-center">
-                          <Fish className="w-4 h-4 mr-1" />
+                          <Wheat className="w-4 h-4 mr-1" />
                           Harvest Ready
                         </p>
                         <Badge className="bg-blue-100 text-blue-800">Action Needed</Badge>
                       </div>
                       <p className="text-xs text-blue-600">
-                        Pond 2 fish ready for harvest in 3 days • Expected yield: 180kg
+                        Maize Field 2 ready for harvest • Expected yield: 2.5 tons
                       </p>
                     </div>
                     <div className="p-3 bg-green-50 border border-green-200 rounded-lg">
@@ -423,7 +457,7 @@ export default function DashboardPage() {
                         </p>
                         <Badge className="bg-green-100 text-green-800">Good News</Badge>
                       </div>
-                      <p className="text-xs text-green-600">You qualify for ₦200K expansion loan at 8% APR</p>
+                      <p className="text-xs text-green-600">You qualify for ₦500K expansion loan at 7.5% APR</p>
                       <Button size="sm" variant="outline" className="mt-2 bg-transparent">
                         Apply Now
                       </Button>
@@ -432,18 +466,51 @@ export default function DashboardPage() {
                 </Card>
               </div>
 
-              {/* Enhanced Performance Metrics */}
+              {/* Multi-Farm Performance Metrics */}
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
                 <Card>
                   <CardHeader>
                     <CardTitle className="flex items-center">
                       <Activity className="w-5 h-5 mr-2 text-green-600" />
-                      My Farm Performance
+                      Multi-Farm Performance
                     </CardTitle>
-                    <CardDescription>Your productivity metrics this month</CardDescription>
+                    <CardDescription>Your productivity metrics across all operations</CardDescription>
                   </CardHeader>
                   <CardContent>
                     <div className="space-y-6">
+                      <div>
+                        <div className="flex justify-between text-sm mb-2">
+                          <span className="flex items-center">
+                            <Wheat className="w-4 h-4 mr-1 text-green-500" />
+                            Crop Production
+                          </span>
+                          <span className="font-medium">8.5 tons / 10 tons target</span>
+                        </div>
+                        <Progress value={85} className="h-3" />
+                        <p className="text-xs text-gray-500 mt-1">85% complete • Excellent season</p>
+                      </div>
+                      <div>
+                        <div className="flex justify-between text-sm mb-2">
+                          <span className="flex items-center">
+                            <Beef className="w-4 h-4 mr-1 text-amber-500" />
+                            Livestock Health
+                          </span>
+                          <span className="font-medium">98% healthy</span>
+                        </div>
+                        <Progress value={98} className="h-3" />
+                        <p className="text-xs text-gray-500 mt-1">Outstanding health management</p>
+                      </div>
+                      <div>
+                        <div className="flex justify-between text-sm mb-2">
+                          <span className="flex items-center">
+                            <Egg className="w-4 h-4 mr-1 text-yellow-500" />
+                            Egg Production
+                          </span>
+                          <span className="font-medium">4,200 / 4,500 monthly target</span>
+                        </div>
+                        <Progress value={93} className="h-3" />
+                        <p className="text-xs text-gray-500 mt-1">93% of target achieved</p>
+                      </div>
                       <div>
                         <div className="flex justify-between text-sm mb-2">
                           <span className="flex items-center">
@@ -453,29 +520,7 @@ export default function DashboardPage() {
                           <span className="font-medium">1,200kg / 1,500kg target</span>
                         </div>
                         <Progress value={80} className="h-3" />
-                        <p className="text-xs text-gray-500 mt-1">80% complete • On track for target</p>
-                      </div>
-                      <div>
-                        <div className="flex justify-between text-sm mb-2">
-                          <span className="flex items-center">
-                            <Leaf className="w-4 h-4 mr-1 text-green-500" />
-                            Fertilizer Production
-                          </span>
-                          <span className="font-medium">450kg / 500kg target</span>
-                        </div>
-                        <Progress value={90} className="h-3" />
-                        <p className="text-xs text-gray-500 mt-1">90% complete • Ahead of schedule</p>
-                      </div>
-                      <div>
-                        <div className="flex justify-between text-sm mb-2">
-                          <span className="flex items-center">
-                            <DollarSign className="w-4 h-4 mr-1 text-emerald-500" />
-                            Revenue Target
-                          </span>
-                          <span className="font-medium">₦3.2M / ₦4M target</span>
-                        </div>
-                        <Progress value={80} className="h-3" />
-                        <p className="text-xs text-gray-500 mt-1">80% complete • Strong performance</p>
+                        <p className="text-xs text-gray-500 mt-1">80% complete • On track</p>
                       </div>
                     </div>
                   </CardContent>
@@ -485,9 +530,9 @@ export default function DashboardPage() {
                   <CardHeader>
                     <CardTitle className="flex items-center">
                       <Zap className="w-5 h-5 mr-2 text-purple-600" />
-                      My Sustainability Impact
+                      Sustainability Impact
                     </CardTitle>
-                    <CardDescription>Your contribution to circular economy</CardDescription>
+                    <CardDescription>Your contribution to sustainable agriculture</CardDescription>
                   </CardHeader>
                   <CardContent>
                     <div className="space-y-4">
@@ -497,23 +542,23 @@ export default function DashboardPage() {
                             <Leaf className="w-4 h-4 text-green-600" />
                           </div>
                           <div>
-                            <span className="text-sm font-medium">Waste Recycled</span>
-                            <p className="text-xs text-gray-500">Fish waste → Fertilizer</p>
+                            <span className="text-sm font-medium">Organic Waste Recycled</span>
+                            <p className="text-xs text-gray-500">Crop residue → Livestock feed</p>
                           </div>
                         </div>
-                        <span className="text-lg font-semibold text-green-600">85%</span>
+                        <span className="text-lg font-semibold text-green-600">92%</span>
                       </div>
                       <div className="flex items-center justify-between p-3 bg-blue-50 rounded-lg">
                         <div className="flex items-center space-x-2">
                           <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center">
-                            <TrendingDown className="w-4 h-4 text-blue-600" />
+                            <Droplets className="w-4 h-4 text-blue-600" />
                           </div>
                           <div>
-                            <span className="text-sm font-medium">Cost Savings</span>
-                            <p className="text-xs text-gray-500">AI optimization</p>
+                            <span className="text-sm font-medium">Water Conservation</span>
+                            <p className="text-xs text-gray-500">Smart irrigation systems</p>
                           </div>
                         </div>
-                        <span className="text-lg font-semibold text-blue-600">₦180K</span>
+                        <span className="text-lg font-semibold text-blue-600">+45%</span>
                       </div>
                       <div className="flex items-center justify-between p-3 bg-purple-50 rounded-lg">
                         <div className="flex items-center space-x-2">
@@ -521,23 +566,23 @@ export default function DashboardPage() {
                             <Wind className="w-4 h-4 text-purple-600" />
                           </div>
                           <div>
-                            <span className="text-sm font-medium">Carbon Reduction</span>
+                            <span className="text-sm font-medium">Carbon Footprint</span>
                             <p className="text-xs text-gray-500">vs traditional farming</p>
                           </div>
                         </div>
-                        <span className="text-lg font-semibold text-purple-600">-45%</span>
+                        <span className="text-lg font-semibold text-purple-600">-38%</span>
                       </div>
-                      <div className="flex items-center justify-between p-3 bg-teal-50 rounded-lg">
+                      <div className="flex items-center justify-between p-3 bg-amber-50 rounded-lg">
                         <div className="flex items-center space-x-2">
-                          <div className="w-8 h-8 bg-teal-100 rounded-full flex items-center justify-center">
-                            <Droplets className="w-4 h-4 text-teal-600" />
+                          <div className="w-8 h-8 bg-amber-100 rounded-full flex items-center justify-center">
+                            <DollarSign className="w-4 h-4 text-amber-600" />
                           </div>
                           <div>
-                            <span className="text-sm font-medium">Water Efficiency</span>
-                            <p className="text-xs text-gray-500">Smart irrigation</p>
+                            <span className="text-sm font-medium">Cost Efficiency</span>
+                            <p className="text-xs text-gray-500">AI optimization</p>
                           </div>
                         </div>
-                        <span className="text-lg font-semibold text-teal-600">+38%</span>
+                        <span className="text-lg font-semibold text-amber-600">₦280K</span>
                       </div>
                     </div>
                   </CardContent>
@@ -553,7 +598,7 @@ export default function DashboardPage() {
                       <CreditCard className="w-5 h-5 mr-2 text-blue-600" />
                       My Credit Profile
                     </CardTitle>
-                    <CardDescription>Your SmartLoop finance status and history</CardDescription>
+                    <CardDescription>Your SmartLoop finance status across all operations</CardDescription>
                   </CardHeader>
                   <CardContent className="space-y-6">
                     <div className="grid grid-cols-2 gap-4">
@@ -563,20 +608,20 @@ export default function DashboardPage() {
                         <div className="text-xs text-green-600 mt-1">+45 this month</div>
                       </div>
                       <div className="text-center p-4 bg-green-50 rounded-lg">
-                        <div className="text-2xl font-bold text-green-600">₦450K</div>
+                        <div className="text-2xl font-bold text-green-600">₦750K</div>
                         <div className="text-sm text-gray-600">Available Credit</div>
-                        <div className="text-xs text-blue-600 mt-1">Pre-approved</div>
+                        <div className="text-xs text-blue-600 mt-1">Multi-farm approved</div>
                       </div>
                     </div>
 
                     <div className="space-y-4">
                       <div className="flex items-center justify-between">
                         <span className="text-sm text-gray-600">Current Loans</span>
-                        <span className="text-lg font-semibold text-amber-600">₦180,000</span>
+                        <span className="text-lg font-semibold text-amber-600">₦320,000</span>
                       </div>
                       <div className="flex items-center justify-between">
                         <span className="text-sm text-gray-600">Monthly Payment</span>
-                        <span className="text-lg font-semibold text-blue-600">₦25,000</span>
+                        <span className="text-lg font-semibold text-blue-600">₦45,000</span>
                       </div>
                       <div className="flex items-center justify-between">
                         <span className="text-sm text-gray-600">Repayment Rate</span>
@@ -584,12 +629,12 @@ export default function DashboardPage() {
                       </div>
                       <div className="flex items-center justify-between">
                         <span className="text-sm text-gray-600">Interest Rate</span>
-                        <span className="text-lg font-semibold text-purple-600">8.5% APR</span>
+                        <span className="text-lg font-semibold text-purple-600">7.5% APR</span>
                       </div>
                     </div>
 
                     <div className="pt-4 border-t">
-                      <Button className="w-full">Apply for New Credit</Button>
+                      <Button className="w-full">Apply for Expansion Credit</Button>
                       <Button variant="outline" className="w-full mt-2 bg-transparent">
                         View Credit History
                       </Button>
@@ -601,51 +646,43 @@ export default function DashboardPage() {
                   <CardHeader>
                     <CardTitle className="flex items-center">
                       <Activity className="w-5 h-5 mr-2 text-green-600" />
-                      My Revenue Cycle
+                      Multi-Farm Revenue Cycle
                     </CardTitle>
-                    <CardDescription>Automatic reinvestment tracking and optimization</CardDescription>
+                    <CardDescription>Diversified income streams and reinvestment</CardDescription>
                   </CardHeader>
                   <CardContent className="space-y-4">
                     <div className="p-4 bg-gradient-to-r from-blue-50 to-blue-100 border border-blue-200 rounded-lg">
                       <div className="flex items-center justify-between mb-2">
-                        <p className="text-sm font-medium text-blue-800">Current Cycle Revenue</p>
+                        <p className="text-sm font-medium text-blue-800">Total Monthly Revenue</p>
                         <Badge className="bg-blue-100 text-blue-800">Active</Badge>
                       </div>
-                      <p className="text-lg font-bold text-blue-900">₦320,000 earned</p>
-                      <p className="text-xs text-blue-600">₦280,000 automatically reinvested (87.5%)</p>
+                      <p className="text-lg font-bold text-blue-900">₦4,800,000</p>
+                      <p className="text-xs text-blue-600">₦4,200,000 automatically reinvested (87.5%)</p>
                       <div className="mt-2">
                         <Progress value={87.5} className="h-2" />
                       </div>
                     </div>
 
-                    <div className="p-4 bg-gradient-to-r from-green-50 to-green-100 border border-green-200 rounded-lg">
-                      <div className="flex items-center justify-between mb-2">
-                        <p className="text-sm font-medium text-green-800">Next Investment</p>
-                        <Badge className="bg-green-100 text-green-800">Scheduled</Badge>
+                    <div className="grid grid-cols-2 gap-4">
+                      <div className="p-3 bg-green-50 border border-green-200 rounded-lg">
+                        <p className="text-sm font-medium text-green-800">Crops</p>
+                        <p className="text-lg font-bold text-green-900">₦2.1M</p>
+                        <p className="text-xs text-green-600">44% of total revenue</p>
                       </div>
-                      <p className="text-sm text-green-900">Feed purchase - ₦45,000</p>
-                      <p className="text-xs text-green-600">Scheduled for next week • Premium quality feed</p>
-                    </div>
-
-                    <div className="p-4 bg-gradient-to-r from-purple-50 to-purple-100 border border-purple-200 rounded-lg">
-                      <div className="flex items-center justify-between mb-2">
-                        <p className="text-sm font-medium text-purple-800">Growth Projection</p>
-                        <Badge className="bg-purple-100 text-purple-800">AI Forecast</Badge>
+                      <div className="p-3 bg-amber-50 border border-amber-200 rounded-lg">
+                        <p className="text-sm font-medium text-amber-800">Livestock</p>
+                        <p className="text-lg font-bold text-amber-900">₦1.2M</p>
+                        <p className="text-xs text-amber-600">25% of total revenue</p>
                       </div>
-                      <p className="text-sm text-purple-900">+15% yield increase expected</p>
-                      <p className="text-xs text-purple-600">Based on current reinvestment pattern</p>
-                    </div>
-
-                    <div className="pt-4 border-t">
-                      <div className="grid grid-cols-2 gap-4">
-                        <div className="text-center">
-                          <div className="text-lg font-bold text-gray-900">6</div>
-                          <div className="text-xs text-gray-600">Completed Cycles</div>
-                        </div>
-                        <div className="text-center">
-                          <div className="text-lg font-bold text-green-600">₦1.8M</div>
-                          <div className="text-xs text-gray-600">Total Reinvested</div>
-                        </div>
+                      <div className="p-3 bg-yellow-50 border border-yellow-200 rounded-lg">
+                        <p className="text-sm font-medium text-yellow-800">Poultry</p>
+                        <p className="text-lg font-bold text-yellow-900">₦800K</p>
+                        <p className="text-xs text-yellow-600">17% of total revenue</p>
+                      </div>
+                      <div className="p-3 bg-blue-50 border border-blue-200 rounded-lg">
+                        <p className="text-sm font-medium text-blue-800">Aquaculture</p>
+                        <p className="text-lg font-bold text-blue-900">₦700K</p>
+                        <p className="text-xs text-blue-600">14% of total revenue</p>
                       </div>
                     </div>
                   </CardContent>
@@ -659,51 +696,65 @@ export default function DashboardPage() {
                   <CardHeader>
                     <CardTitle className="flex items-center">
                       <Package className="w-5 h-5 mr-2 text-green-600" />
-                      My Branded Products
+                      My Diversified Products
                     </CardTitle>
-                    <CardDescription>Your Agrobrand product inventory and status</CardDescription>
+                    <CardDescription>Your Agrobrand product portfolio across all operations</CardDescription>
                   </CardHeader>
                   <CardContent className="space-y-4">
                     <div className="flex items-center justify-between p-4 border-2 border-green-200 rounded-lg bg-green-50">
                       <div className="flex items-center space-x-3">
                         <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center">
-                          <QrCode className="w-6 h-6 text-green-600" />
+                          <Wheat className="w-6 h-6 text-green-600" />
                         </div>
                         <div>
-                          <p className="font-medium">Adebayo's Organic Fertilizer</p>
-                          <p className="text-sm text-gray-500">500kg ready • QR traced • Premium grade</p>
-                          <p className="text-xs text-green-600">Market price: ₦180/kg (+35% premium)</p>
+                          <p className="font-medium">Adebayo's Organic Maize</p>
+                          <p className="text-sm text-gray-500">2.5 tons ready • QR traced • Premium grade</p>
+                          <p className="text-xs text-green-600">Market price: ₦280/kg (+40% premium)</p>
                         </div>
                       </div>
                       <Badge className="bg-green-100 text-green-800">Ready to Ship</Badge>
                     </div>
 
+                    <div className="flex items-center justify-between p-4 border-2 border-amber-200 rounded-lg bg-amber-50">
+                      <div className="flex items-center space-x-3">
+                        <div className="w-12 h-12 bg-amber-100 rounded-lg flex items-center justify-center">
+                          <Beef className="w-6 h-6 text-amber-600" />
+                        </div>
+                        <div>
+                          <p className="font-medium">Grass-Fed Beef</p>
+                          <p className="text-sm text-gray-500">500kg processed • Organic certified</p>
+                          <p className="text-xs text-amber-600">Premium quality: ₦3,500/kg</p>
+                        </div>
+                      </div>
+                      <Badge className="bg-amber-100 text-amber-800">Processing</Badge>
+                    </div>
+
+                    <div className="flex items-center justify-between p-4 border-2 border-yellow-200 rounded-lg bg-yellow-50">
+                      <div className="flex items-center space-x-3">
+                        <div className="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center">
+                          <Egg className="w-6 h-6 text-yellow-600" />
+                        </div>
+                        <div>
+                          <p className="font-medium">Free-Range Eggs</p>
+                          <p className="text-sm text-gray-500">4,200 eggs/month • Omega-3 enriched</p>
+                          <p className="text-xs text-yellow-600">Consistent supply: ₁50/egg</p>
+                        </div>
+                      </div>
+                      <Badge className="bg-yellow-100 text-yellow-800">Daily Production</Badge>
+                    </div>
+
                     <div className="flex items-center justify-between p-4 border-2 border-blue-200 rounded-lg bg-blue-50">
                       <div className="flex items-center space-x-3">
                         <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
-                          <Package className="w-6 h-6 text-blue-600" />
-                        </div>
-                        <div>
-                          <p className="font-medium">Premium Fish Feed</p>
-                          <p className="text-sm text-gray-500">200kg packaged • Your brand • High protein</p>
-                          <p className="text-xs text-blue-600">Cost savings: ₦25/kg vs market</p>
-                        </div>
-                      </div>
-                      <Badge className="bg-blue-100 text-blue-800">Processing</Badge>
-                    </div>
-
-                    <div className="flex items-center justify-between p-4 border-2 border-purple-200 rounded-lg bg-purple-50">
-                      <div className="flex items-center space-x-3">
-                        <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center">
-                          <Fish className="w-6 h-6 text-purple-600" />
+                          <Fish className="w-6 h-6 text-blue-600" />
                         </div>
                         <div>
                           <p className="font-medium">Fresh Akure Catfish</p>
-                          <p className="text-sm text-gray-500">300kg • Farm-to-fork traced • Grade A</p>
-                          <p className="text-xs text-purple-600">Pre-orders: 5 customers waiting</p>
+                          <p className="text-sm text-gray-500">300kg • Farm-to-fork traced</p>
+                          <p className="text-xs text-blue-600">Pre-orders: 8 customers waiting</p>
                         </div>
                       </div>
-                      <Badge className="bg-purple-100 text-purple-800">Harvesting</Badge>
+                      <Badge className="bg-blue-100 text-blue-800">Harvesting</Badge>
                     </div>
                   </CardContent>
                 </Card>
@@ -712,9 +763,9 @@ export default function DashboardPage() {
                   <CardHeader>
                     <CardTitle className="flex items-center">
                       <BarChart3 className="w-5 h-5 mr-2 text-blue-600" />
-                      My Product Performance
+                      Product Performance Analytics
                     </CardTitle>
-                    <CardDescription>Customer feedback, sales, and market impact</CardDescription>
+                    <CardDescription>Customer feedback and market performance</CardDescription>
                   </CardHeader>
                   <CardContent className="space-y-6">
                     <div className="grid grid-cols-2 gap-4">
@@ -724,126 +775,199 @@ export default function DashboardPage() {
                             <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
                           ))}
                         </div>
-                        <p className="text-2xl font-bold text-yellow-600">4.8</p>
+                        <p className="text-2xl font-bold text-yellow-600">4.9</p>
                         <p className="text-sm text-gray-600">Customer Rating</p>
                       </div>
                       <div className="text-center p-4 bg-blue-50 rounded-lg border border-blue-200">
-                        <p className="text-2xl font-bold text-blue-600">1,247</p>
+                        <p className="text-2xl font-bold text-blue-600">2,847</p>
                         <p className="text-sm text-gray-600">QR Code Scans</p>
-                        <p className="text-xs text-blue-500">+23% this week</p>
+                        <p className="text-xs text-blue-500">+35% this week</p>
                       </div>
                       <div className="text-center p-4 bg-green-50 rounded-lg border border-green-200">
-                        <p className="text-2xl font-bold text-green-600">₦95K</p>
+                        <p className="text-2xl font-bold text-green-600">₦185K</p>
                         <p className="text-sm text-gray-600">Brand Premium</p>
                         <p className="text-xs text-green-500">This month</p>
                       </div>
                       <div className="text-center p-4 bg-purple-50 rounded-lg border border-purple-200">
-                        <p className="text-2xl font-bold text-purple-600">8</p>
+                        <p className="text-2xl font-bold text-purple-600">15</p>
                         <p className="text-sm text-gray-600">Retail Partners</p>
-                        <p className="text-xs text-purple-500">+2 new this month</p>
+                        <p className="text-xs text-purple-500">+5 new this month</p>
                       </div>
                     </div>
 
                     <div className="space-y-3">
                       <div className="flex justify-between items-center">
                         <span className="text-sm text-gray-600">Product Traceability</span>
-                        <span className="text-sm font-semibold text-green-600">95% Coverage</span>
+                        <span className="text-sm font-semibold text-green-600">97% Coverage</span>
                       </div>
-                      <Progress value={95} className="h-2" />
+                      <Progress value={97} className="h-2" />
 
                       <div className="flex justify-between items-center">
                         <span className="text-sm text-gray-600">Customer Retention</span>
-                        <span className="text-sm font-semibold text-blue-600">87% Return Rate</span>
+                        <span className="text-sm font-semibold text-blue-600">91% Return Rate</span>
                       </div>
-                      <Progress value={87} className="h-2" />
+                      <Progress value={91} className="h-2" />
 
                       <div className="flex justify-between items-center">
                         <span className="text-sm text-gray-600">Market Penetration</span>
-                        <span className="text-sm font-semibold text-purple-600">12% Local Share</span>
+                        <span className="text-sm font-semibold text-purple-600">18% Local Share</span>
                       </div>
-                      <Progress value={12} className="h-2" />
+                      <Progress value={18} className="h-2" />
                     </div>
                   </CardContent>
                 </Card>
               </div>
             </TabsContent>
 
-            <TabsContent value="farm" className="space-y-6">
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {[1, 2, 3, 4, 5, 6].map((pond) => (
-                  <Card key={pond} className="relative overflow-hidden">
-                    <div
-                      className={`absolute top-0 left-0 w-full h-1 ${
-                        pond <= 4
-                          ? "bg-gradient-to-r from-green-500 to-emerald-600"
-                          : "bg-gradient-to-r from-gray-400 to-gray-500"
-                      }`}
-                    />
-                    <CardHeader>
-                      <CardTitle className="flex items-center justify-between">
-                        <span className="flex items-center">
-                          <Fish className="w-5 h-5 mr-2" />
-                          Pond {pond}
-                        </span>
-                        <Badge variant={pond <= 4 ? "default" : "secondary"}>
-                          {pond <= 4 ? "Active" : "Maintenance"}
-                        </Badge>
-                      </CardTitle>
-                    </CardHeader>
-                    <CardContent className="space-y-4">
-                      <div className="grid grid-cols-2 gap-4 text-sm">
-                        <div className="flex items-center space-x-2">
-                          <Thermometer className="w-4 h-4 text-orange-500" />
-                          <div>
-                            <span className="text-gray-500">Temperature</span>
-                            <p className="font-medium">28.{pond}°C</p>
-                          </div>
-                        </div>
-                        <div className="flex items-center space-x-2">
-                          <Activity className="w-4 h-4 text-blue-500" />
-                          <div>
-                            <span className="text-gray-500">pH Level</span>
-                            <p className="font-medium">7.{pond}</p>
-                          </div>
-                        </div>
-                        <div className="flex items-center space-x-2">
-                          <Wind className="w-4 h-4 text-teal-500" />
-                          <div>
-                            <span className="text-gray-500">Oxygen</span>
-                            <p className="font-medium">8.{pond}mg/L</p>
-                          </div>
-                        </div>
-                        <div className="flex items-center space-x-2">
-                          <Fish className="w-4 h-4 text-green-500" />
-                          <div>
-                            <span className="text-gray-500">Fish Count</span>
-                            <p className="font-medium">{150 + pond * 20}</p>
-                          </div>
-                        </div>
+            <TabsContent value="operations" className="space-y-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                {/* Crop Fields */}
+                <Card className="relative overflow-hidden">
+                  <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-green-500 to-emerald-600" />
+                  <CardHeader>
+                    <CardTitle className="flex items-center justify-between">
+                      <span className="flex items-center">
+                        <Wheat className="w-5 h-5 mr-2" />
+                        Crop Fields
+                      </span>
+                      <Badge className="bg-green-100 text-green-800">8 Active</Badge>
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent className="space-y-4">
+                    <div className="space-y-2 text-sm">
+                      <div className="flex justify-between">
+                        <span>Maize (4 fields)</span>
+                        <span className="text-green-600">85% ready</span>
                       </div>
+                      <div className="flex justify-between">
+                        <span>Cassava (2 fields)</span>
+                        <span className="text-blue-600">Growing</span>
+                      </div>
+                      <div className="flex justify-between">
+                        <span>Yam (1 field)</span>
+                        <span className="text-amber-600">Planted</span>
+                      </div>
+                      <div className="flex justify-between">
+                        <span>Rice (1 field)</span>
+                        <span className="text-purple-600">Flowering</span>
+                      </div>
+                    </div>
+                    <Button size="sm" className="w-full">
+                      View All Fields
+                    </Button>
+                  </CardContent>
+                </Card>
 
-                      <div>
-                        <div className="flex justify-between text-sm mb-2">
-                          <span>Growth Progress</span>
-                          <span className="font-medium">{60 + pond * 5}%</span>
-                        </div>
-                        <Progress value={60 + pond * 5} className="h-3" />
-                        <p className="text-xs text-gray-500 mt-1">
-                          {pond <= 2 ? "Ready for harvest soon" : pond <= 4 ? "Growing well" : "Under maintenance"}
-                        </p>
+                {/* Livestock */}
+                <Card className="relative overflow-hidden">
+                  <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-amber-500 to-orange-600" />
+                  <CardHeader>
+                    <CardTitle className="flex items-center justify-between">
+                      <span className="flex items-center">
+                        <Beef className="w-5 h-5 mr-2" />
+                        Livestock
+                      </span>
+                      <Badge className="bg-amber-100 text-amber-800">45 Head</Badge>
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent className="space-y-4">
+                    <div className="space-y-2 text-sm">
+                      <div className="flex justify-between">
+                        <span>Cattle</span>
+                        <span className="text-green-600">25 healthy</span>
                       </div>
+                      <div className="flex justify-between">
+                        <span>Goats</span>
+                        <span className="text-green-600">15 healthy</span>
+                      </div>
+                      <div className="flex justify-between">
+                        <span>Sheep</span>
+                        <span className="text-green-600">5 healthy</span>
+                      </div>
+                      <div className="flex justify-between">
+                        <span>Health Status</span>
+                        <span className="text-green-600">98% excellent</span>
+                      </div>
+                    </div>
+                    <Button size="sm" className="w-full">
+                      Manage Livestock
+                    </Button>
+                  </CardContent>
+                </Card>
 
-                      <div className="flex space-x-2">
-                        <Button size="sm" className="flex-1">
-                          View Details
-                        </Button>
-                        <Button size="sm" variant="outline">
-                          <Settings className="w-4 h-4" />
-                        </Button>
+                {/* Poultry */}
+                <Card className="relative overflow-hidden">
+                  <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-yellow-500 to-yellow-600" />
+                  <CardHeader>
+                    <CardTitle className="flex items-center justify-between">
+                      <span className="flex items-center">
+                        <Egg className="w-5 h-5 mr-2" />
+                        Poultry
+                      </span>
+                      <Badge className="bg-yellow-100 text-yellow-800">200 Birds</Badge>
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent className="space-y-4">
+                    <div className="space-y-2 text-sm">
+                      <div className="flex justify-between">
+                        <span>Layers</span>
+                        <span className="text-green-600">150 active</span>
                       </div>
-                    </CardContent>
-                  </Card>
-                ))}
+                      <div className="flex justify-between">
+                        <span>Broilers</span>
+                        <span className="text-blue-600">50 growing</span>
+                      </div>
+                      <div className="flex justify-between">
+                        <span>Daily Eggs</span>
+                        <span className="text-amber-600">140-150</span>
+                      </div>
+                      <div className="flex justify-between">
+                        <span>Mortality Rate</span>
+                        <span className="text-green-600">&lt; 2%</span>
+                      </div>
+                    </div>
+                    <Button size="sm" className="w-full">
+                      Poultry Management
+                    </Button>
+                  </CardContent>
+                </Card>
+
+                {/* Aquaculture */}
+                <Card className="relative overflow-hidden">
+                  <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-500 to-blue-600" />
+                  <CardHeader>
+                    <CardTitle className="flex items-center justify-between">
+                      <span className="flex items-center">
+                        <Fish className="w-5 h-5 mr-2" />
+                        Fish Ponds
+                      </span>
+                      <Badge className="bg-blue-100 text-blue-800">6 Ponds</Badge>
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent className="space-y-4">
+                    <div className="space-y-2 text-sm">
+                      <div className="flex justify-between">
+                        <span>Catfish Ponds</span>
+                        <span className="text-green-600">4 active</span>
+                      </div>
+                      <div className="flex justify-between">
+                        <span>Tilapia Ponds</span>
+                        <span className="text-blue-600">2 active</span>
+                      </div>
+                      <div className="flex justify-between">
+                        <span>Ready to Harvest</span>
+                        <span className="text-amber-600">2 ponds</span>
+                      </div>
+                      <div className="flex justify-between">
+                        <span>Water Quality</span>
+                        <span className="text-green-600">Optimal</span>
+                      </div>
+                    </div>
+                    <Button size="sm" className="w-full">
+                      Pond Management
+                    </Button>
+                  </CardContent>
+                </Card>
               </div>
             </TabsContent>
 
@@ -853,37 +977,33 @@ export default function DashboardPage() {
                   <CardHeader>
                     <CardTitle className="flex items-center">
                       <Brain className="w-5 h-5 mr-2 text-purple-600" />
-                      AI Predictions for Your Farm
+                      AI Predictions Across All Operations
                     </CardTitle>
-                    <CardDescription>Personalized insights and forecasts powered by machine learning</CardDescription>
+                    <CardDescription>Comprehensive insights for your diversified farm</CardDescription>
                   </CardHeader>
                   <CardContent className="space-y-4">
-                    <div className="p-4 bg-gradient-to-r from-purple-50 to-purple-100 border border-purple-200 rounded-lg">
-                      <div className="flex items-center justify-between mb-3">
-                        <p className="text-sm font-medium text-purple-800 flex items-center">
-                          <Fish className="w-4 h-4 mr-1" />
-                          Your Yield Forecast
-                        </p>
-                        <Badge className="bg-purple-100 text-purple-800">94% Accurate</Badge>
-                      </div>
-                      <p className="text-lg font-bold text-purple-900">1,850kg expected</p>
-                      <p className="text-xs text-purple-600">From Pond 2 in 6 days • Based on current growth rate</p>
-                      <div className="mt-2 flex items-center space-x-2">
-                        <Progress value={85} className="flex-1 h-2" />
-                        <span className="text-xs text-purple-600">85% ready</span>
-                      </div>
-                    </div>
-
                     <div className="p-4 bg-gradient-to-r from-green-50 to-green-100 border border-green-200 rounded-lg">
                       <div className="flex items-center justify-between mb-3">
                         <p className="text-sm font-medium text-green-800 flex items-center">
-                          <CheckCircle2 className="w-4 h-4 mr-1" />
-                          Disease Risk Assessment
+                          <Wheat className="w-4 h-4 mr-1" />
+                          Crop Yield Forecast
                         </p>
-                        <Badge className="bg-green-100 text-green-800">Low Risk</Badge>
+                        <Badge className="bg-green-100 text-green-800">96% Accurate</Badge>
                       </div>
-                      <p className="text-sm text-green-900">All ponds healthy</p>
-                      <p className="text-xs text-green-600">Water quality optimal, no disease indicators detected</p>
+                      <p className="text-lg font-bold text-green-900">8.5 tons expected</p>
+                      <p className="text-xs text-green-600">Maize harvest in 2 weeks • Above target yield</p>
+                    </div>
+
+                    <div className="p-4 bg-gradient-to-r from-amber-50 to-amber-100 border border-amber-200 rounded-lg">
+                      <div className="flex items-center justify-between mb-3">
+                        <p className="text-sm font-medium text-amber-800 flex items-center">
+                          <Beef className="w-4 h-4 mr-1" />
+                          Livestock Health Prediction
+                        </p>
+                        <Badge className="bg-green-100 text-green-800">Excellent</Badge>
+                      </div>
+                      <p className="text-sm text-amber-900">All animals healthy</p>
+                      <p className="text-xs text-amber-600">No disease risk detected • Vaccination schedule optimal</p>
                     </div>
 
                     <div className="p-4 bg-gradient-to-r from-blue-50 to-blue-100 border border-blue-200 rounded-lg">
@@ -894,10 +1014,8 @@ export default function DashboardPage() {
                         </p>
                         <Badge className="bg-blue-100 text-blue-800">Trending Up</Badge>
                       </div>
-                      <p className="text-sm text-blue-900">₦850/kg expected</p>
-                      <p className="text-xs text-blue-600">
-                        Catfish prices in Akure market expected to rise 12% next week
-                      </p>
+                      <p className="text-sm text-blue-900">Multi-commodity price rise</p>
+                      <p className="text-xs text-blue-600">Maize +15%, Eggs +8%, Fish +12% expected next month</p>
                     </div>
                   </CardContent>
                 </Card>
@@ -906,24 +1024,33 @@ export default function DashboardPage() {
                   <CardHeader>
                     <CardTitle className="flex items-center">
                       <Zap className="w-5 h-5 mr-2 text-amber-600" />
-                      Personalized Recommendations
+                      Personalized Farm Recommendations
                     </CardTitle>
-                    <CardDescription>AI-powered suggestions tailored to your farm</CardDescription>
+                    <CardDescription>AI-powered suggestions for optimization</CardDescription>
                   </CardHeader>
                   <CardContent className="space-y-4">
-                    <div className="flex items-start space-x-3 p-3 bg-purple-50 border border-purple-200 rounded-lg">
-                      <Brain className="w-6 h-6 text-purple-600 mt-1 flex-shrink-0" />
+                    <div className="flex items-start space-x-3 p-3 bg-green-50 border border-green-200 rounded-lg">
+                      <Wheat className="w-6 h-6 text-green-600 mt-1 flex-shrink-0" />
                       <div>
-                        <p className="text-sm font-medium text-purple-800">Feed Optimization</p>
-                        <p className="text-xs text-purple-600 mb-2">
-                          Reduce protein by 2% in Pond 4 feed to save ₦15K without affecting growth
+                        <p className="text-sm font-medium text-green-800">Crop Rotation Optimization</p>
+                        <p className="text-xs text-green-600 mb-2">
+                          Plant legumes in Field 3 after maize harvest to improve soil nitrogen
                         </p>
-                        <Button
-                          size="sm"
-                          variant="outline"
-                          className="text-purple-600 border-purple-300 bg-transparent"
-                        >
-                          Apply Recommendation
+                        <Button size="sm" variant="outline" className="text-green-600 border-green-300 bg-transparent">
+                          Plan Rotation
+                        </Button>
+                      </div>
+                    </div>
+
+                    <div className="flex items-start space-x-3 p-3 bg-amber-50 border border-amber-200 rounded-lg">
+                      <Beef className="w-6 h-6 text-amber-600 mt-1 flex-shrink-0" />
+                      <div>
+                        <p className="text-sm font-medium text-amber-800">Livestock Feed Optimization</p>
+                        <p className="text-xs text-amber-600 mb-2">
+                          Use crop residue from maize harvest to reduce feed costs by ₦35K/month
+                        </p>
+                        <Button size="sm" variant="outline" className="text-amber-600 border-amber-300 bg-transparent">
+                          Implement Plan
                         </Button>
                       </div>
                     </div>
@@ -931,38 +1058,29 @@ export default function DashboardPage() {
                     <div className="flex items-start space-x-3 p-3 bg-blue-50 border border-blue-200 rounded-lg">
                       <CloudRain className="w-6 h-6 text-blue-600 mt-1 flex-shrink-0" />
                       <div>
-                        <p className="text-sm font-medium text-blue-800">Weather Alert</p>
+                        <p className="text-sm font-medium text-blue-800">Weather Optimization</p>
                         <p className="text-xs text-blue-600 mb-2">
-                          Heavy rains expected tomorrow - cover Pond 2 and 3 to prevent overflow
+                          Adjust irrigation schedule - rain expected in 3 days, save ₦15K on water
                         </p>
                         <Button size="sm" variant="outline" className="text-blue-600 border-blue-300 bg-transparent">
-                          Set Reminder
-                        </Button>
-                      </div>
-                    </div>
-
-                    <div className="flex items-start space-x-3 p-3 bg-green-50 border border-green-200 rounded-lg">
-                      <TrendingUp className="w-6 h-6 text-green-600 mt-1 flex-shrink-0" />
-                      <div>
-                        <p className="text-sm font-medium text-green-800">Growth Acceleration</p>
-                        <p className="text-xs text-green-600 mb-2">
-                          Increase feeding frequency by 15% in Pond 1 for optimal growth rate
-                        </p>
-                        <Button size="sm" variant="outline" className="text-green-600 border-green-300 bg-transparent">
                           Update Schedule
                         </Button>
                       </div>
                     </div>
 
-                    <div className="flex items-start space-x-3 p-3 bg-amber-50 border border-amber-200 rounded-lg">
-                      <DollarSign className="w-6 h-6 text-amber-600 mt-1 flex-shrink-0" />
+                    <div className="flex items-start space-x-3 p-3 bg-purple-50 border border-purple-200 rounded-lg">
+                      <DollarSign className="w-6 h-6 text-purple-600 mt-1 flex-shrink-0" />
                       <div>
-                        <p className="text-sm font-medium text-amber-800">Market Opportunity</p>
-                        <p className="text-xs text-amber-600 mb-2">
-                          High demand for organic fertilizer in Ibadan - consider expanding production
+                        <p className="text-sm font-medium text-purple-800">Revenue Diversification</p>
+                        <p className="text-xs text-purple-600 mb-2">
+                          Consider adding beekeeping - high demand for honey in your area
                         </p>
-                        <Button size="sm" variant="outline" className="text-amber-600 border-amber-300 bg-transparent">
-                          Explore Market
+                        <Button
+                          size="sm"
+                          variant="outline"
+                          className="text-purple-600 border-purple-300 bg-transparent"
+                        >
+                          Explore Option
                         </Button>
                       </div>
                     </div>
@@ -970,34 +1088,34 @@ export default function DashboardPage() {
                 </Card>
               </div>
 
-              {/* AI Performance Metrics */}
+              {/* Multi-Farm AI Performance */}
               <Card>
                 <CardHeader>
                   <CardTitle className="flex items-center">
                     <Activity className="w-5 h-5 mr-2 text-green-600" />
-                    AI System Performance
+                    AI System Performance Across Operations
                   </CardTitle>
-                  <CardDescription>How our AI is helping optimize your farm operations</CardDescription>
+                  <CardDescription>How our AI is optimizing your diversified farm</CardDescription>
                 </CardHeader>
                 <CardContent>
                   <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
                     <div className="text-center p-4 bg-purple-50 rounded-lg">
-                      <div className="text-2xl font-bold text-purple-600">94%</div>
+                      <div className="text-2xl font-bold text-purple-600">96%</div>
                       <div className="text-sm text-gray-600">Prediction Accuracy</div>
-                      <div className="text-xs text-purple-500 mt-1">Yield forecasting</div>
+                      <div className="text-xs text-purple-500 mt-1">Multi-crop forecasting</div>
                     </div>
                     <div className="text-center p-4 bg-green-50 rounded-lg">
-                      <div className="text-2xl font-bold text-green-600">₦180K</div>
+                      <div className="text-2xl font-bold text-green-600">₦280K</div>
                       <div className="text-sm text-gray-600">Cost Savings</div>
                       <div className="text-xs text-green-500 mt-1">This month</div>
                     </div>
                     <div className="text-center p-4 bg-blue-50 rounded-lg">
-                      <div className="text-2xl font-bold text-blue-600">23</div>
+                      <div className="text-2xl font-bold text-blue-600">47</div>
                       <div className="text-sm text-gray-600">AI Recommendations</div>
                       <div className="text-xs text-blue-500 mt-1">This week</div>
                     </div>
                     <div className="text-center p-4 bg-amber-50 rounded-lg">
-                      <div className="text-2xl font-bold text-amber-600">6.5hrs</div>
+                      <div className="text-2xl font-bold text-amber-600">8.5hrs</div>
                       <div className="text-sm text-gray-600">Time Saved Daily</div>
                       <div className="text-xs text-amber-500 mt-1">Automation</div>
                     </div>

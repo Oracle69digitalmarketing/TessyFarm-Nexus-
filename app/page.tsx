@@ -24,6 +24,10 @@ import {
   Recycle,
   DollarSign,
   Play,
+  Wheat,
+  Beef,
+  Egg,
+  Tractor,
 } from "lucide-react"
 import Link from "next/link"
 
@@ -36,7 +40,7 @@ export default function HomePage() {
           <div className="flex justify-between items-center py-4">
             <div className="flex items-center space-x-2">
               <div className="w-10 h-10 bg-gradient-to-br from-green-600 to-emerald-600 rounded-xl flex items-center justify-center">
-                <Fish className="w-6 h-6 text-white" />
+                <Tractor className="w-6 h-6 text-white" />
               </div>
               <div>
                 <span className="text-2xl font-bold bg-gradient-to-r from-green-600 to-emerald-600 bg-clip-text text-transparent">
@@ -91,7 +95,7 @@ export default function HomePage() {
                 <p className="text-xl text-gray-600 leading-relaxed">
                   Revolutionizing agriculture through AI-powered credit scoring, blockchain traceability, and circular
                   economy principles. Empowering 50,000+ farmers across Nigeria with smart financing, branded products,
-                  and predictive analytics.
+                  and predictive analytics for crops, livestock, poultry, and aquaculture.
                 </p>
               </div>
 
@@ -145,17 +149,17 @@ export default function HomePage() {
                     <div className="text-xs text-gray-600">Credit Score</div>
                   </div>
                   <div className="bg-green-50 p-3 rounded-lg">
-                    <div className="text-lg font-bold text-green-600">₦3.2M</div>
+                    <div className="text-lg font-bold text-green-600">₦4.8M</div>
                     <div className="text-xs text-gray-600">Monthly Revenue</div>
                   </div>
                 </div>
 
                 <div className="space-y-2">
                   <div className="flex justify-between text-sm">
-                    <span>AI Yield Prediction</span>
-                    <span className="text-green-600">94% Accurate</span>
+                    <span>Multi-Farm AI Prediction</span>
+                    <span className="text-green-600">96% Accurate</span>
                   </div>
-                  <Progress value={94} className="h-2" />
+                  <Progress value={96} className="h-2" />
                 </div>
               </div>
 
@@ -175,7 +179,7 @@ export default function HomePage() {
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Our unified approach combines financial technology, product branding, and artificial intelligence to
-              create a complete ecosystem for modern African agriculture.
+              create a complete ecosystem for modern African agriculture across all farming types.
             </p>
           </div>
 
@@ -189,18 +193,19 @@ export default function HomePage() {
                 </div>
                 <CardTitle className="text-xl text-blue-900">SmartLoop Agrofinance</CardTitle>
                 <CardDescription className="text-gray-600">
-                  AI-powered credit scoring and automated revenue recycling for sustainable farm growth
+                  AI-powered credit scoring and automated revenue recycling for sustainable farm growth across all
+                  agricultural sectors
                 </CardDescription>
               </CardHeader>
               <CardContent className="space-y-4">
                 <div className="space-y-3">
                   <div className="flex items-center space-x-2">
                     <CheckCircle className="w-4 h-4 text-green-500" />
-                    <span className="text-sm">AI Credit Scoring (94% accuracy)</span>
+                    <span className="text-sm">AI Credit Scoring (96% accuracy)</span>
                   </div>
                   <div className="flex items-center space-x-2">
                     <CheckCircle className="w-4 h-4 text-green-500" />
-                    <span className="text-sm">Automated Revenue Recycling</span>
+                    <span className="text-sm">Multi-Farm Revenue Recycling</span>
                   </div>
                   <div className="flex items-center space-x-2">
                     <CheckCircle className="w-4 h-4 text-green-500" />
@@ -218,7 +223,7 @@ export default function HomePage() {
                   </div>
                   <div className="flex justify-between text-sm">
                     <span>Default Rate</span>
-                    <span className="font-semibold text-green-600">2.1%</span>
+                    <span className="font-semibold text-green-600">1.8%</span>
                   </div>
                 </div>
               </CardContent>
@@ -233,7 +238,8 @@ export default function HomePage() {
                 </div>
                 <CardTitle className="text-xl text-green-900">Agrobrand</CardTitle>
                 <CardDescription className="text-gray-600">
-                  Blockchain-verified product traceability and premium branding for market differentiation
+                  Blockchain-verified product traceability and premium branding for crops, livestock, poultry, and fish
+                  products
                 </CardDescription>
               </CardHeader>
               <CardContent className="space-y-4">
@@ -248,7 +254,7 @@ export default function HomePage() {
                   </div>
                   <div className="flex items-center space-x-2">
                     <CheckCircle className="w-4 h-4 text-green-500" />
-                    <span className="text-sm">Premium Brand Development</span>
+                    <span className="text-sm">Multi-Product Brand Development</span>
                   </div>
                   <div className="flex items-center space-x-2">
                     <CheckCircle className="w-4 h-4 text-green-500" />
@@ -258,11 +264,11 @@ export default function HomePage() {
                 <div className="pt-4 border-t">
                   <div className="flex justify-between text-sm mb-2">
                     <span>Products Traced</span>
-                    <span className="font-semibold">1M+</span>
+                    <span className="font-semibold">1.5M+</span>
                   </div>
                   <div className="flex justify-between text-sm">
                     <span>Brand Premium</span>
-                    <span className="font-semibold text-green-600">+35%</span>
+                    <span className="font-semibold text-green-600">+38%</span>
                   </div>
                 </div>
               </CardContent>
@@ -277,14 +283,15 @@ export default function HomePage() {
                 </div>
                 <CardTitle className="text-xl text-purple-900">Fusion AI</CardTitle>
                 <CardDescription className="text-gray-600">
-                  Advanced machine learning for yield prediction, disease detection, and farm optimization
+                  Advanced machine learning for yield prediction, disease detection, and optimization across all farm
+                  types
                 </CardDescription>
               </CardHeader>
               <CardContent className="space-y-4">
                 <div className="space-y-3">
                   <div className="flex items-center space-x-2">
                     <CheckCircle className="w-4 h-4 text-green-500" />
-                    <span className="text-sm">Yield Prediction (94% accuracy)</span>
+                    <span className="text-sm">Multi-Crop Yield Prediction (96% accuracy)</span>
                   </div>
                   <div className="flex items-center space-x-2">
                     <CheckCircle className="w-4 h-4 text-green-500" />
@@ -302,11 +309,11 @@ export default function HomePage() {
                 <div className="pt-4 border-t">
                   <div className="flex justify-between text-sm mb-2">
                     <span>Prediction Accuracy</span>
-                    <span className="font-semibold">94%</span>
+                    <span className="font-semibold">96%</span>
                   </div>
                   <div className="flex justify-between text-sm">
                     <span>Cost Reduction</span>
-                    <span className="font-semibold text-green-600">-42%</span>
+                    <span className="font-semibold text-green-600">-45%</span>
                   </div>
                 </div>
               </CardContent>
@@ -315,8 +322,65 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Farm Types Supported */}
+      <section className="py-20 bg-gray-50">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+              Supporting All Types of African Agriculture
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              From traditional crops to modern aquaculture, our platform adapts to every farming operation with
+              specialized AI insights and management tools.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <Card className="text-center p-6 border-2 hover:border-green-200 transition-colors">
+              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Wheat className="w-8 h-8 text-green-600" />
+              </div>
+              <div className="text-xl font-bold text-green-600 mb-2">Crop Farming</div>
+              <div className="text-gray-600 font-medium mb-2">Maize, Rice, Cassava, Yam</div>
+              <div className="text-sm text-gray-500">
+                AI-powered yield prediction, disease detection, and market timing
+              </div>
+            </Card>
+
+            <Card className="text-center p-6 border-2 hover:border-amber-200 transition-colors">
+              <div className="w-16 h-16 bg-amber-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Beef className="w-8 h-8 text-amber-600" />
+              </div>
+              <div className="text-xl font-bold text-amber-600 mb-2">Livestock</div>
+              <div className="text-gray-600 font-medium mb-2">Cattle, Goats, Sheep</div>
+              <div className="text-sm text-gray-500">Health monitoring, breeding optimization, and feed management</div>
+            </Card>
+
+            <Card className="text-center p-6 border-2 hover:border-yellow-200 transition-colors">
+              <div className="w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Egg className="w-8 h-8 text-yellow-600" />
+              </div>
+              <div className="text-xl font-bold text-yellow-600 mb-2">Poultry</div>
+              <div className="text-gray-600 font-medium mb-2">Layers, Broilers, Local Breeds</div>
+              <div className="text-sm text-gray-500">Production tracking, health alerts, and market optimization</div>
+            </Card>
+
+            <Card className="text-center p-6 border-2 hover:border-blue-200 transition-colors">
+              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Fish className="w-8 h-8 text-blue-600" />
+              </div>
+              <div className="text-xl font-bold text-blue-600 mb-2">Aquaculture</div>
+              <div className="text-gray-600 font-medium mb-2">Catfish, Tilapia, Prawns</div>
+              <div className="text-sm text-gray-500">
+                Water quality monitoring, feeding optimization, and harvest timing
+              </div>
+            </Card>
+          </div>
+        </div>
+      </section>
+
       {/* Platform Architecture */}
-      <section id="platform" className="py-20 bg-gray-50">
+      <section id="platform" className="py-20 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">Built for African Agriculture</h2>
@@ -400,11 +464,11 @@ export default function HomePage() {
                     <div className="text-sm text-gray-600">Credit Disbursed</div>
                   </div>
                   <div className="text-center p-4 bg-purple-50 rounded-lg">
-                    <div className="text-2xl font-bold text-purple-600">1.2M</div>
+                    <div className="text-2xl font-bold text-purple-600">1.5M</div>
                     <div className="text-sm text-gray-600">Products Traced</div>
                   </div>
                   <div className="text-center p-4 bg-amber-50 rounded-lg">
-                    <div className="text-2xl font-bold text-amber-600">94%</div>
+                    <div className="text-2xl font-bold text-amber-600">96%</div>
                     <div className="text-sm text-gray-600">AI Accuracy</div>
                   </div>
                 </div>
@@ -413,16 +477,16 @@ export default function HomePage() {
                   <div>
                     <div className="flex justify-between text-sm mb-1">
                       <span>Platform Adoption</span>
-                      <span>87%</span>
+                      <span>89%</span>
                     </div>
-                    <Progress value={87} className="h-2" />
+                    <Progress value={89} className="h-2" />
                   </div>
                   <div>
                     <div className="flex justify-between text-sm mb-1">
                       <span>Farmer Satisfaction</span>
-                      <span>92%</span>
+                      <span>94%</span>
                     </div>
-                    <Progress value={92} className="h-2" />
+                    <Progress value={94} className="h-2" />
                   </div>
                 </div>
               </div>
@@ -432,13 +496,13 @@ export default function HomePage() {
       </section>
 
       {/* Impact Metrics */}
-      <section id="impact" className="py-20 bg-white">
+      <section id="impact" className="py-20 bg-gray-50">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">Measurable Impact Across Africa</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Our platform is driving real change in agricultural productivity, financial inclusion, and environmental
-              sustainability across Nigerian farming communities.
+              sustainability across Nigerian farming communities of all types.
             </p>
           </div>
 
@@ -458,23 +522,23 @@ export default function HomePage() {
               </div>
               <div className="text-3xl font-bold text-blue-600 mb-2">₦2.5B</div>
               <div className="text-gray-600 font-medium">Credit Disbursed</div>
-              <div className="text-sm text-gray-500 mt-1">With 2.1% default rate</div>
+              <div className="text-sm text-gray-500 mt-1">With 1.8% default rate</div>
             </Card>
 
             <Card className="text-center p-6 border-2 hover:border-purple-200 transition-colors">
               <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <TrendingUp className="w-8 h-8 text-purple-600" />
               </div>
-              <div className="text-3xl font-bold text-purple-600 mb-2">+67%</div>
+              <div className="text-3xl font-bold text-purple-600 mb-2">+72%</div>
               <div className="text-gray-600 font-medium">Yield Increase</div>
-              <div className="text-sm text-gray-500 mt-1">Average across all farms</div>
+              <div className="text-sm text-gray-500 mt-1">Average across all farm types</div>
             </Card>
 
             <Card className="text-center p-6 border-2 hover:border-emerald-200 transition-colors">
               <div className="w-16 h-16 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Leaf className="w-8 h-8 text-emerald-600" />
               </div>
-              <div className="text-3xl font-bold text-emerald-600 mb-2">-45%</div>
+              <div className="text-3xl font-bold text-emerald-600 mb-2">-48%</div>
               <div className="text-gray-600 font-medium">Carbon Footprint</div>
               <div className="text-sm text-gray-500 mt-1">Through circular economy</div>
             </Card>
@@ -486,7 +550,7 @@ export default function HomePage() {
               <h3 className="text-2xl font-bold text-gray-900 mb-4">Circular Economy Impact</h3>
               <p className="text-gray-600 max-w-2xl mx-auto">
                 Our integrated approach creates a sustainable cycle where waste becomes input, reducing costs and
-                environmental impact while increasing profitability.
+                environmental impact while increasing profitability across all farm types.
               </p>
             </div>
 
@@ -495,17 +559,17 @@ export default function HomePage() {
                 <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Recycle className="w-8 h-8 text-green-600" />
                 </div>
-                <div className="text-2xl font-bold text-green-600 mb-2">85%</div>
+                <div className="text-2xl font-bold text-green-600 mb-2">88%</div>
                 <div className="font-medium text-gray-900">Waste Recycled</div>
-                <div className="text-sm text-gray-600 mt-1">Fish waste converted to organic fertilizer</div>
+                <div className="text-sm text-gray-600 mt-1">Organic waste converted to fertilizer and feed</div>
               </div>
 
               <div className="text-center">
                 <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
                   <TrendingDown className="w-8 h-8 text-blue-600" />
                 </div>
-                <div className="text-2xl font-bold text-blue-600 mb-2">-42%</div>
-                <div className="font-medium text-gray-900">Feed Costs</div>
+                <div className="text-2xl font-bold text-blue-600 mb-2">-45%</div>
+                <div className="font-medium text-gray-900">Input Costs</div>
                 <div className="text-sm text-gray-600 mt-1">Through optimized nutrition and local sourcing</div>
               </div>
 
@@ -513,7 +577,7 @@ export default function HomePage() {
                 <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Target className="w-8 h-8 text-purple-600" />
                 </div>
-                <div className="text-2xl font-bold text-purple-600 mb-2">+35%</div>
+                <div className="text-2xl font-bold text-purple-600 mb-2">+38%</div>
                 <div className="font-medium text-gray-900">Revenue Increase</div>
                 <div className="text-sm text-gray-600 mt-1">From premium branded products</div>
               </div>
@@ -523,7 +587,7 @@ export default function HomePage() {
       </section>
 
       {/* Testimonials */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">Trusted by Farmers Across Nigeria</h2>
@@ -540,8 +604,9 @@ export default function HomePage() {
                 ))}
               </div>
               <p className="text-gray-600 mb-4">
-                "TessyFarm Nexus transformed my fish farming business. The AI predictions helped me increase my yield by
-                80%, and the credit system gave me access to funds I never thought possible."
+                "TessyFarm Nexus transformed my diversified farm. The AI predictions helped me increase my maize yield
+                by 85% and my fish production by 80%. The credit system gave me access to funds I never thought
+                possible."
               </p>
               <div className="flex items-center">
                 <div className="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center mr-3">
@@ -549,7 +614,7 @@ export default function HomePage() {
                 </div>
                 <div>
                   <div className="font-medium">Adebayo Ogundimu</div>
-                  <div className="text-sm text-gray-500">Fish Farmer, Akure</div>
+                  <div className="text-sm text-gray-500">Multi-Farm Owner, Akure</div>
                 </div>
               </div>
             </Card>
@@ -562,7 +627,7 @@ export default function HomePage() {
               </div>
               <p className="text-gray-600 mb-4">
                 "The blockchain traceability feature helped me get premium prices for my organic products. Customers
-                trust the QR codes and pay 35% more for verified quality."
+                trust the QR codes and pay 40% more for verified quality across all my products."
               </p>
               <div className="flex items-center">
                 <div className="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center mr-3">
@@ -582,8 +647,8 @@ export default function HomePage() {
                 ))}
               </div>
               <p className="text-gray-600 mb-4">
-                "The voice assistant in Igbo language made it so easy for me to use the platform. I can check my pond
-                conditions and get AI recommendations without reading anything."
+                "The voice assistant in Igbo language made it so easy for me to use the platform. I can check my
+                livestock health and get AI recommendations for all my animals without reading anything."
               </p>
               <div className="flex items-center">
                 <div className="w-10 h-10 bg-purple-100 rounded-full flex items-center justify-center mr-3">
@@ -591,7 +656,7 @@ export default function HomePage() {
                 </div>
                 <div>
                   <div className="font-medium">Chukwudi Okafor</div>
-                  <div className="text-sm text-gray-500">Aquaculture Farmer, Enugu</div>
+                  <div className="text-sm text-gray-500">Livestock Farmer, Enugu</div>
                 </div>
               </div>
             </Card>
@@ -621,7 +686,7 @@ export default function HomePage() {
                     <h3 className="text-lg font-semibold mb-2">Market Opportunity</h3>
                     <p className="text-blue-100">
                       $35B African agtech market with 70% of population in agriculture. Massive opportunity for digital
-                      transformation.
+                      transformation across all farming sectors.
                     </p>
                   </div>
                 </div>
@@ -633,8 +698,8 @@ export default function HomePage() {
                   <div>
                     <h3 className="text-lg font-semibold mb-2">Proven Traction</h3>
                     <p className="text-blue-100">
-                      50K+ active farmers, ₦2.5B credit disbursed, 94% AI accuracy, and 2.1% default rate demonstrate
-                      strong product-market fit.
+                      50K+ active farmers, ₦2.5B credit disbursed, 96% AI accuracy, and 1.8% default rate demonstrate
+                      strong product-market fit across all agricultural sectors.
                     </p>
                   </div>
                 </div>
@@ -646,8 +711,8 @@ export default function HomePage() {
                   <div>
                     <h3 className="text-lg font-semibold mb-2">Competitive Advantage</h3>
                     <p className="text-blue-100">
-                      First unified platform combining fintech, AI, and blockchain specifically designed for African
-                      agriculture.
+                      First unified platform combining fintech, AI, and blockchain specifically designed for all types
+                      of African agriculture.
                     </p>
                   </div>
                 </div>
@@ -717,7 +782,7 @@ export default function HomePage() {
           <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">Ready to Transform Your Farm?</h2>
           <p className="text-xl text-green-100 mb-8 max-w-2xl mx-auto">
             Join thousands of farmers already using TessyFarm Nexus to increase yields, access credit, and build
-            sustainable businesses.
+            sustainable businesses across all types of agriculture.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" className="bg-white text-green-600 hover:bg-gray-100" asChild>
@@ -744,12 +809,12 @@ export default function HomePage() {
             <div className="space-y-4">
               <div className="flex items-center space-x-2">
                 <div className="w-8 h-8 bg-green-600 rounded-lg flex items-center justify-center">
-                  <Fish className="w-5 h-5 text-white" />
+                  <Tractor className="w-5 h-5 text-white" />
                 </div>
                 <span className="text-xl font-bold">TessyFarm Nexus</span>
               </div>
               <p className="text-gray-400">
-                Revolutionizing African agriculture through AI, fintech, and blockchain technology.
+                Revolutionizing African agriculture through AI, fintech, and blockchain technology for all farm types.
               </p>
             </div>
 
@@ -764,12 +829,12 @@ export default function HomePage() {
             </div>
 
             <div>
-              <h3 className="font-semibold mb-4">Company</h3>
+              <h3 className="font-semibold mb-4">Farm Types</h3>
               <div className="space-y-2 text-gray-400">
-                <div>About Us</div>
-                <div>Careers</div>
-                <div>Press</div>
-                <div>Contact</div>
+                <div>Crop Farming</div>
+                <div>Livestock</div>
+                <div>Poultry</div>
+                <div>Aquaculture</div>
               </div>
             </div>
 
@@ -779,7 +844,7 @@ export default function HomePage() {
                 <div>Help Center</div>
                 <div>Documentation</div>
                 <div>Community</div>
-                <div>Status</div>
+                <div>Contact</div>
               </div>
             </div>
           </div>
