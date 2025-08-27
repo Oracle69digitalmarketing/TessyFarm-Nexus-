@@ -8,7 +8,7 @@
         "email": "adewaleadewumi@oracle69.com",
         "description": "A digital strategist and developer creating intelligent, scalable solutions that merge technology and agriculture to drive growth in underserved and rural markets. My work, including TessyFarm Nexus, is built on a foundation of FOSS principles.",
         "webpageUrl": {
-            "url": "https://oracle69.com/tessyfarm/"
+            "url": "https://oracle69.com"
         }
     },
     "projects": [
@@ -17,7 +17,7 @@
             "name": "TessyFarm Nexus",
             "description": "An AI and blockchain-powered FOSS platform that provides data-driven efficiency, supply chain transparency, and critical insights to small-scale farmers. It serves as essential technological infrastructure for sustainable agriculture.",
             "webpageUrl": {
-                "url": "https://oracle69.com"
+                "url": "https://oracle69.com/tessyfarm"
             },
             "repositoryUrl": {
                 "url": "https://github.com/Oracle69digitalmarketing/TessyFarm-Nexus-"
