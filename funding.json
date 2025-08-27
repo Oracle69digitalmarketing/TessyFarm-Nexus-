@@ -1,59 +1,196 @@
-{
-    "$schema": "https://floss.fund/schema/v1.0.0/funding.schema.json#",
-    "version": "v1.0.0",
-    "entity": {
-        "type": "individual",
-        "role": "maintainer",
-        "name": "Prince Adewumi Adewale",
-        "email": "adewaleadewumi@oracle69.com",
-        "description": "A digital strategist and developer creating intelligent, scalable solutions that merge technology and agriculture to drive growth in underserved and rural markets. My work, including TessyFarm Nexus, is built on a foundation of FOSS principles.",
-        "webpageUrl": {
-            "url": "https://oracle69.com"
-        }
-    },
-    "projects": [
-        {
-            "guid": "tessyfarm-nexus",
-            "name": "TessyFarm Nexus",
-            "description": "An AI and blockchain-powered FOSS platform that provides data-driven efficiency, supply chain transparency, and critical insights to small-scale farmers. It serves as essential technological infrastructure for sustainable agriculture.",
-            "repositoryUrl": {
-                "url": "https://github.com/Oracle69digitalmarketing/TessyFarm-Nexus-"
-            },
-            "licenses": ["spdx:MIT", "spdx:AGPL-3.0"],
-            "tags": ["agritech", "ai", "blockchain", "supply-chain", "machine-learning"]
-        }
-    ],
-    "funding": {
-        "channels": [
-            {
-                "guid": "open-collective",
-                "type": "open-collective",
-                "address": "https://opencollective.com/tessyfarm-nexus",
-                "description": "Support the TessyFarm Nexus project through Open Collective, a transparent platform for FOSS funding."
-            }
-        ],
-        "plans": [
-            {
-                "guid": "hosting-maintenance",
-                "status": "active",
-                "name": "Server & Maintenance Fund",
-                "description": "Covers monthly cloud hosting, data storage, and server maintenance costs required for the platform's sustained operation. This is crucial for a stable user experience.",
-                "amount": 1000,
-                "currency": "USD",
-                "frequency": "monthly",
-                "channels": ["open-collective"]
-            },
-            {
-                "guid": "developer-stipend",
-                "status": "active",
-                "name": "Developer & Feature Grant",
-                "description": "A one-time grant to support key feature development, including real-time AI crop disease detection and local weather API integration. This will accelerate the platform's value and user adoption.",
-                "amount": 25000,
-                "currency": "USD",
-                "frequency": "one-time",
-                "channels": ["open-collective"]
-            }
-        ],
-        "history": []
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TessyFarm Nexus</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f9fdf9;
+      color: #222;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
     }
-}
+    header {
+      background: linear-gradient(135deg, #2d6a4f, #95d5b2);
+      color: #fff;
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+    header img {
+      max-width: 120px;
+      margin-bottom: 1rem;
+      border-radius: 50%;
+      background: #fff;
+      padding: 0.5rem;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+    main {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+    main p {
+      font-size: 1.1rem;
+      margin-bottom: 1.5rem;
+    }
+    .cta {
+      display: inline-block;
+      background: #2d6a4f;
+      color: #fff;
+      padding: 0.8rem 1.2rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s ease;
+    }
+    .cta:hover {
+      background: #1b4332;
+    }
+    section {
+      margin-top: 3rem;
+    }
+    section h2 {
+      color: #2d6a4f;
+      margin-bottom: 1rem;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+    ul li {
+      background: #edf6f0;
+      margin-bottom: 0.8rem;
+      padding: 0.8rem;
+      border-radius: 6px;
+    }
+    .signup {
+      margin-top: 3rem;
+      padding: 2rem;
+      background: #edf6f0;
+      border-radius: 10px;
+      text-align: center;
+    }
+    .signup h2 {
+      margin-bottom: 1rem;
+      color: #2d6a4f;
+    }
+    .signup input[type="email"] {
+      padding: 0.8rem;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      width: 70%;
+      max-width: 350px;
+      margin-right: 0.5rem;
+    }
+    .signup button {
+      padding: 0.8rem 1.2rem;
+      border: none;
+      border-radius: 6px;
+      background: #2d6a4f;
+      color: #fff;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    .signup button:hover {
+      background: #1b4332;
+    }
+    .success {
+      margin-top: 1rem;
+      color: green;
+      font-weight: bold;
+    }
+    .error {
+      margin-top: 1rem;
+      color: red;
+      font-weight: bold;
+    }
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: #f1f5f2;
+      font-size: 0.9rem;
+      margin-top: 3rem;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="oracle69-logo.jpg" alt="Oracle69 Logo">
+    <h1>🌱 TessyFarm Nexus</h1>
+    <p>AI + Blockchain for Sustainable Agriculture</p>
+  </header>
+
+  <main>
+    <p>
+      TessyFarm Nexus is an open-source (FOSS) platform designed to empower small-scale farmers 
+      with AI-driven insights and blockchain-enabled transparency. 
+      Our mission: boost crop yields, strengthen supply chains, and drive sustainable farming practices.
+    </p>
+    <p>
+      Currently in development — we’re building tools that ensure smarter decision-making, fairer 
+      trade, and scalable rural innovation.
+    </p>
+    <a class="cta" href="https://github.com/Oracle69digitalmarketing/TessyFarm-Nexus-" target="_blank">
+      🚀 Explore on GitHub
+    </a>
+
+    <section>
+      <h2>🔮 Roadmap</h2>
+      <ul>
+        <li>🌾 Crop Intelligence AI — predictive insights on yield & soil health</li>
+        <li>🔗 Blockchain Supply Chain Ledger — end-to-end transparency</li>
+        <li>🛒 Farmer Marketplace — connect growers directly with buyers</li>
+        <li>📊 Smart Analytics Dashboard — track inputs, harvests & revenue</li>
+      </ul>
+    </section>
+
+    <section class="signup">
+      <h2>📩 Join the Waitlist</h2>
+      <p>Be the first to know when TessyFarm Nexus launches. Sign up for early access and updates.</p>
+      <form id="waitlist-form">
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+        <button type="submit">Join Waitlist</button>
+      </form>
+      <div id="response"></div>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 TessyFarm Nexus · Powered by Oracle69 Digital Marketing
+  </footer>
+
+  <script>
+    const form = document.getElementById('waitlist-form');
+    const responseDiv = document.getElementById('response');
+
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+      const email = document.getElementById('email').value;
+
+      fetch("YOUR_GOOGLE_SCRIPT_URL_HERE", {
+        method: "POST",
+        body: JSON.stringify({ email: email }),
+        headers: { "Content-Type": "application/json" }
+      })
+      .then(res => res.text())
+      .then(data => {
+        responseDiv.innerHTML = "<p class='success'>✅ Thanks! You’ve been added to the waitlist.</p>";
+        form.reset();
+      })
+      .catch(err => {
+        responseDiv.innerHTML = "<p class='error'>❌ Something went wrong. Try again.</p>";
+      });
+    });
+  </script>
+
+</body>
+</html>
