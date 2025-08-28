@@ -1,29 +1,39 @@
 {
-  "$schema": "http://json-schema.org/draft-07/schema#",
   "version": "v1.0.0",
   "entity": {
     "type": "individual",
     "role": "maintainer",
     "name": "Prince Adewumi Adewale",
     "email": "adewaleadewumi@oracle69.com",
-    "description": "A digital strategist and developer creating intelligent, scalable solutions that merge technology and agriculture to drive growth in underserved and rural markets. My work, including TessyFarm Nexus, is built on a foundation of FOSS principles.",
+    "description": "A digital strategist and developer focused on building intelligent, scalable solutions that merge technology and agriculture to drive growth in underserved and rural markets. This work is built on FOSS principles.",
     "webpageUrl": {
-      "url": "https://oracle69.com/tessyfarm"
+      "url": "https://oracle69.com",
+      "wellKnown": "https://oracle69.com/.well-known/funding-manifest-urls"
     }
   },
   "projects": [
     {
       "guid": "tessyfarm-nexus",
       "name": "TessyFarm Nexus",
-      "description": "An AI and blockchain-powered FOSS platform that provides data-driven efficiency, supply chain transparency, and critical insights to small-scale farmers. It serves as essential technological infrastructure for sustainable agriculture.",
+      "description": "An AI and blockchain-powered FOSS platform that delivers data-driven efficiency and critical insights to small-scale farmers in rural Africa. It's essential technological infrastructure for sustainable agriculture.",
       "webpageUrl": {
-        "url": "https://oracle69.com/tessyfarm"
+        "url": "https://oracle69.com/tessyfarm",
+        "wellKnown": "https://oracle69.com/.well-known/funding-manifest-urls"
       },
       "repositoryUrl": {
-        "url": "https://github.com/Oracle69digitalmarketing/TessyFarm-Nexus"
+        "url": "https://github.com/Oracle69digitalmarketing/TessyFarm-Nexus-",
+        "wellKnown": "https://oracle69.com/.well-known/funding-manifest-urls"
       },
-      "licenses": ["spdx:MIT", "spdx:AGPL-3.0"],
-      "tags": ["agritech", "ai", "blockchain", "supply-chain", "machine-learning"]
+      "licenses": [
+        "spdx:MIT",
+        "spdx:AGPL-3.0"
+      ],
+      "tags": [
+        "agritech",
+        "ai",
+        "blockchain",
+        "supply-chain"
+      ]
     }
   ],
   "funding": {
@@ -31,30 +41,34 @@
       {
         "guid": "open-collective",
         "type": "payment-provider",
-        "address": "https://opencollective.com/tessyfarm-nexus",
-        "description": "Support the TessyFarm Nexus project through Open Collective, a transparent platform for FOSS funding."
+        "address": "https://opencollective.com/oracle69-projects",
+        "description": "Support our collection of FOSS projects through our Open Collective page. All funds are publicly accounted for and directly support project growth and maintenance."
       }
     ],
     "plans": [
       {
-        "guid": "hosting-maintenance",
+        "guid": "tessyfarm-general-support",
         "status": "active",
-        "name": "Server & Maintenance Fund",
-        "description": "Covers monthly cloud hosting, data storage, and server maintenance costs required for the platform's sustained operation. This is crucial for a stable user experience.",
-        "amount": 1000,
+        "name": "General TessyFarm Support",
+        "description": "A recurring contribution to cover essential operational costs like server hosting, data storage, and core maintenance specifically for the TessyFarm Nexus project.",
+        "amount": 0,
         "currency": "USD",
         "frequency": "monthly",
-        "channels": ["open-collective"]
+        "channels": [
+          "open-collective"
+        ]
       },
       {
-        "guid": "developer-stipend",
+        "guid": "tessyfarm-ai-grant",
         "status": "active",
-        "name": "Developer & Feature Grant",
-        "description": "A one-time grant to support key feature development, including real-time AI crop disease detection and local weather API integration. This will accelerate the platform's value and user adoption.",
-        "amount": 25000,
+        "name": "AI Model Development Grant",
+        "description": "A strategic one-time grant to accelerate the development and training of new AI models for real-time crop disease detection and soil health analysis.",
+        "amount": 10000,
         "currency": "USD",
         "frequency": "one-time",
-        "channels": ["open-collective"]
+        "channels": [
+          "open-collective"
+        ]
       }
     ],
     "history": []
