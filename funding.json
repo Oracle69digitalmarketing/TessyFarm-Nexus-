@@ -1,48 +1,74 @@
 {
-    "version": "v1.0.0",
-    "entity": {
-        "type": "individual",
-        "role": "maintainer",
-        "name": "Prince Adewumi Adewale",
-        "email": "adewaleadewumi@oracle69.com",
-        "description": "A digital strategist and developer focused on building intelligent, scalable solutions that merge technology and health to drive growth and access in underserved and rural markets. This work is built on FOSS principles.",
-        "webpageUrl": {
-            "url": "https://oracle69.com",
-            "wellKnown": "https://oracle69.com/.well-known/funding-manifest-urls"
-        }
-    },
-    "projects": [{
-        "guid": "tessyfarm-nexus",
-        "name": "TessyFarm Nexus",
-        "description": "An open-source agri-tech platform that provides healthcare management and AI diagnostics to improve health access and data-driven care in rural communities.",
-        "webpageUrl": {
-            "url": "https://oracle69.com/tessyfarm-nexus",
-            "wellKnown": "https://oracle69.com/.well-known/funding-manifest-urls"
-        },
-        "repositoryUrl": {
-            "url": "https://github.com/Oracle69digitalmarketing/TessyFarm-Nexus",
-        },
-        "licenses": ["spdx:MIT", "spdx:AGPL-3.0"],
-        "tags": ["healthtech", "ai", "diagnostics", "rural-health"]
-    }],
-    "funding": {
-        "channels": [{
-            "guid": "open-collective",
-            "type": "payment-provider",
-            "address": "https://opencollective.com/oracle69-projects",
-            "description": "Support our collection of FOSS projects through our Open Collective page. All funds are publicly accounted for and directly support project growth and maintenance."
-        }],
-        "plans": [{
-            "guid": "tessyfarm-general-support",
-            "status": "active",
-            "name": "General TessyFarm Support",
-            "description": "A recurring contribution to cover essential operational costs like server hosting and core maintenance specifically for the TessyFarm Nexus project.",
-            "amount": 0,
-            "currency": "USD",
-            "frequency": "monthly",
-            "channels": ["open-collective"]
-        }],
-        "history": []
+  "version": "v1.0.0",
+  "entity": {
+    "type": "individual",
+    "role": "maintainer",
+    "name": "Prince Adewumi Adewale",
+    "email": "adewaleadewumi@oracle69.com",
+    "description": "A digital strategist and developer focused on building intelligent, scalable solutions that merge technology with agriculture, health, and marketing. This work is built on FOSS principles.",
+    "webpageUrl": {
+      "url": "https://oracle69.com"
     }
+  },
+  "projects": [
+    {
+      "guid": "tessyfarm-nexus",
+      "name": "TessyFarm Nexus",
+      "description": "An open-source agri-tech platform that provides AI diagnostics and supply chain management for smart farming and improved market access.",
+      "webpageUrl": {
+        "url": "https://oracle69.com/tessyfarm-nexus"
+      },
+      "repositoryUrl": {
+        "url": "https://github.com/Oracle69digitalmarketing/TessyFarm-Nexus",
+        "wellKnown": "https://github.com/Oracle69digitalmarketing/TessyFarm-Nexus/blob/main/.well-known/funding-manifest-urls"
+      },
+      "licenses": [
+        "spdx:MIT",
+        "spdx:AGPL-3.0"
+      ],
+      "tags": [
+        "agritech",
+        "ai",
+        "blockchain",
+        "supply-chain"
+      ]
+    }
+  ],
+  "funding": {
+    "channels": [
+      {
+        "guid": "open-collective",
+        "type": "payment-provider",
+        "address": "https://opencollective.com/oracle69-projects",
+        "description": "Support our collection of FOSS projects through our Open Collective page. All funds are publicly accounted for and directly support project growth and maintenance."
+      }
+    ],
+    "plans": [
+      {
+        "guid": "tessyfarm-general-support",
+        "status": "active",
+        "name": "General TessyFarm Support",
+        "description": "A recurring contribution to cover essential operational costs like server hosting and core maintenance specifically for the TessyFarm Nexus project.",
+        "amount": 0,
+        "currency": "USD",
+        "frequency": "monthly",
+        "channels": [
+          "open-collective"
+        ]
+      },
+      {
+        "guid": "tessyfarm-ai-grant",
+        "status": "active",
+        "name": "AI Model Development Grant",
+        "description": "A strategic one-time grant to fund the secure acquisition and processing of de-identified medical datasets for improving AI model accuracy.",
+        "amount": 10000,
+        "currency": "USD",
+        "frequency": "one-time",
+        "channels": [
+          "open-collective"
+        ]
+      }
+    ],
+    "history": []
+  }
 }
-
