@@ -21,7 +21,6 @@
         },
         "repositoryUrl": {
             "url": "https://github.com/Oracle69digitalmarketing/TessyFarm-Nexus",
-            "wellKnown": "https://oracle69.com/.well-known/funding-manifest-urls"
         },
         "licenses": ["spdx:MIT", "spdx:AGPL-3.0"],
         "tags": ["healthtech", "ai", "diagnostics", "rural-health"]
@@ -46,3 +45,4 @@
         "history": []
     }
 }
+
