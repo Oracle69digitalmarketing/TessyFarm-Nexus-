@@ -7,8 +7,8 @@
     "email": "adewaleadewumi@oracle69.com",
     "description": "A digital strategist and developer focused on building intelligent, scalable solutions that merge technology with agriculture, health, and marketing. This work is built on FOSS principles.",
     "webpageUrl": {
-      "url": "https://oracle69.com"
-          "wellKnown": ""
+      "url": "https://oracle69.com",
+      "wellKnown": ""
     }
   },
   "projects": [
@@ -17,11 +17,11 @@
       "name": "TessyFarm Nexus",
       "description": "An open-source agri-tech platform that provides AI diagnostics and supply chain management for smart farming and improved market access.",
       "webpageUrl": {
-        "https://oracle69.com/tessyfarm/funding.json"
+        "url": "https://oracle69.com/tessyfarm-nexus"
       },
       "repositoryUrl": {
-        "url": "https://github.com/Oracle69digitalmarketing/TessyFarm-Nexus-",
-        "wellKnown": "https://github.com/Oracle69digitalmarketing/TessyFarm-Nexus-/blob/main/.well-known/funding-manifest-urls"
+        "url": "https://github.com/Oracle69digitalmarketing/TessyFarm-Nexus",
+        "wellKnown": "https://github.com/Oracle69digitalmarketing/TessyFarm-Nexus/blob/main/.well-known/funding-manifest-urls"
       },
       "licenses": [
         "spdx:MIT",
