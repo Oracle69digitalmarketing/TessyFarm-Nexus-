@@ -1,7 +1,7 @@
 ​# TessyFarm Nexus
 
 ​An AI and Blockchain Agri-Platform for Smart Farm Management.
-​[![Deployed on Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?style=for-the-badge&logo=vercel)](https://vercel.com/prince-adewumi-adewale/tessyfarm-nexus)
+​[![Deployed on Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?style=.for-the-badge&logo=vercel)](https://vercel.com/prince-adewumi-adewale/tessyfarm-nexus)
 ​
 ## Overview
 
@@ -25,11 +25,13 @@
 **[GitHub Repository](https://github.com/Oracle69digitalmarketing/TessyFarm-Nexus)**
 
 ​## Contributing
+
 ​We are building a platform to drive global agricultural growth. Your expertise can help us get there faster. 
 
 We welcome contributions of all kinds—from code and bug reports to documentation and design. 
 
 Please read our [Contributing Guide](CONTRIBUTING.md) to learn how you can help.
+
 ​## Support Our Work
 
 ​Your financial support helps us maintain the project and accelerate development. Consider making a one-time or recurring contribution through our Open Collective page.
