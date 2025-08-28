@@ -17,11 +17,11 @@
       "name": "TessyFarm Nexus",
       "description": "An open-source agri-tech platform that provides AI diagnostics and supply chain management for smart farming and improved market access.",
       "webpageUrl": {
-        "url": "https://oracle69.com/tessyfarm-nexus"
+        "url": "https://oracle69.com/tessyfarm-nexus/funding.json"
       },
       "repositoryUrl": {
-        "url": "https://github.com/Oracle69digitalmarketing/TessyFarm-Nexus",
-        "wellKnown": "https://github.com/Oracle69digitalmarketing/TessyFarm-Nexus/blob/main/.well-known/funding-manifest-urls"
+        "url": "https://github.com/Oracle69digitalmarketing/TessyFarm-Nexus-",
+        "wellKnown": "https://github.com/Oracle69digitalmarketing/TessyFarm-Nexus-/blob/main/.well-known/funding-manifest-urls"
       },
       "licenses": [
         "spdx:MIT",
