@@ -8,6 +8,7 @@
     "description": "A digital strategist and developer focused on building intelligent, scalable solutions that merge technology with agriculture, health, and marketing. This work is built on FOSS principles.",
     "webpageUrl": {
       "url": "https://oracle69.com"
+          "wellKnown": ""
     }
   },
   "projects": [
@@ -16,11 +17,11 @@
       "name": "TessyFarm Nexus",
       "description": "An open-source agri-tech platform that provides AI diagnostics and supply chain management for smart farming and improved market access.",
       "webpageUrl": {
-        "url": "https://oracle69.com/tessyfarm-nexus"
+        "https://oracle69.com/tessyfarm/funding.json"
       },
       "repositoryUrl": {
-        "url": "https://github.com/Oracle69digitalmarketing/TessyFarm-Nexus",
-        "wellKnown": "https://github.com/Oracle69digitalmarketing/TessyFarm-Nexus/blob/main/.well-known/funding-manifest-urls"
+        "url": "https://github.com/Oracle69digitalmarketing/TessyFarm-Nexus-",
+        "wellKnown": "https://github.com/Oracle69digitalmarketing/TessyFarm-Nexus-/blob/main/.well-known/funding-manifest-urls"
       },
       "licenses": [
         "spdx:MIT",
@@ -39,7 +40,7 @@
       {
         "guid": "open-collective",
         "type": "payment-provider",
-        "address": "https://opencollective.com/oracle69-projects",
+        "address": "https://opencollective.com/TessyFarm-Nexus",
         "description": "Support our collection of FOSS projects through our Open Collective page. All funds are publicly accounted for and directly support project growth and maintenance."
       }
     ],
